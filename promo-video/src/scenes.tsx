@@ -1,16 +1,16 @@
 import React from 'react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
+import {c, V} from './timing';
 import {C, Card, Counter, Eyebrow, Footnote, Icon, Product, Rise, Title, useIn, useSec} from './ui';
 
-const V = 0.3; // voice-over starts 0.3 s into every scene
 
 const pad: React.CSSProperties = {padding: '90px 110px'};
 
 /* 1 — Hook */
 export const S1: React.FC = () => {
   const s = useSec();
-  const hook = interpolate(s, [2.5, 2.9], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const dark = interpolate(s, [0, 1.3, 1.6], [1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const hook = interpolate(s, [V + c(1, 'brand') - 0.25, V + c(1, 'brand') + 0.1], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const dark = interpolate(s, [0, V + c(1, 'life'), V + c(1, 'life') + 0.3], [1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{background: '#000', opacity: dark}} />
@@ -18,21 +18,21 @@ export const S1: React.FC = () => {
         <Rise at={0.15}>
           <div style={{fontSize: 130, fontWeight: 800, letterSpacing: -4, color: '#5b6472'}}>Світло зникло?</div>
         </Rise>
-        <Rise at={1.5}>
+        <Rise at={V + c(1, 'life')}>
           <div style={{fontSize: 130, fontWeight: 800, letterSpacing: -4, color: C.green, textShadow: '0 0 60px rgba(140,255,75,0.5)'}}>
             Життя — ні.
           </div>
         </Rise>
       </AbsoluteFill>
-      <Product src="img/angle.png" width={1180} at={3} style={{left: 370, top: 300}} />
+      <Product src="img/angle.png" width={1180} at={V + c(1, 'brand') + 0.1} style={{left: 370, top: 300}} />
       <AbsoluteFill style={{alignItems: 'center', paddingTop: 70}}>
-        <Rise at={3.1} y={-30}>
+        <Rise at={V + c(1, 'brand') + 0.2} y={-30}>
           <div style={{fontSize: 30, fontWeight: 600, letterSpacing: 10, color: C.dim, textAlign: 'center'}}>ALLPOWERS</div>
           <div style={{fontSize: 120, fontWeight: 800, letterSpacing: -4, lineHeight: 1}}>
             S2000 <span style={{color: C.green}}>Pro</span>
           </div>
         </Rise>
-        <Rise at={5.3} y={20}>
+        <Rise at={V + c(1, 'brand') + 1.9} y={20}>
           <div style={{fontSize: 36, color: C.dim, marginTop: 14}}>Портативна електростанція для вашого дому</div>
         </Rise>
       </AbsoluteFill>
@@ -42,7 +42,7 @@ export const S1: React.FC = () => {
 
 /* 2 — Capacity & power */
 export const S2: React.FC = () => {
-  const peak = useIn(V + 6.3);
+  const peak = useIn(V + c(2, 'w') + 2);
   return (
     <AbsoluteFill style={pad}>
       <Product src="img/front.png" width={900} at={0.1} style={{left: 60, top: 330}} />
@@ -50,14 +50,14 @@ export const S2: React.FC = () => {
         <Eyebrow>Ємність і потужність</Eyebrow>
         <Rise at={V + 0.1}>
           <div style={{fontSize: 190, fontWeight: 800, letterSpacing: -8, lineHeight: 1, marginTop: 30}}>
-            <Counter to={1451} at={V + 0.1} dur={2.2} />
+            <Counter to={1451} at={V + 0.1} dur={1.8} />
             <span style={{fontSize: 64, color: C.cyan, letterSpacing: 0, marginLeft: 16}}>Вт·год</span>
           </div>
           <div style={{fontSize: 30, color: C.dim}}>ємність акумулятора</div>
         </Rise>
-        <Rise at={V + 3.5}>
+        <Rise at={V + c(2, 'w')}>
           <div style={{fontSize: 190, fontWeight: 800, letterSpacing: -8, lineHeight: 1, marginTop: 40}}>
-            <Counter to={2400} at={V + 3.5} dur={1.6} />
+            <Counter to={2400} at={V + c(2, 'w')} dur={1.4} />
             <span style={{fontSize: 64, color: C.green, letterSpacing: 0, marginLeft: 16}}>Вт</span>
           </div>
           <div style={{fontSize: 30, color: C.dim}}>чиста синусоїда, 4 розетки 220–240 В</div>
@@ -77,12 +77,12 @@ export const S2: React.FC = () => {
 };
 
 /* 3 — Runtimes */
-const runs = [
-  {icon: 'fridge', name: 'Холодильник', val: '≈ 20', unit: 'годин', at: 0.0, bar: 0.6},
-  {icon: 'router', name: 'Wi-Fi роутер', val: '100+', unit: 'годин', at: 3.5, bar: 1},
-  {icon: 'tv', name: 'Телевізор', val: '≈ 12', unit: 'годин', at: 5.1, bar: 0.45},
-  {icon: 'kettle', name: 'Електрочайник', val: '≈ 8', unit: 'закипань', at: 7.3, bar: 0.35},
-  {icon: 'washer', name: 'Пральна машина', val: '1–2', unit: 'прання', at: 9.8, bar: 0.25},
+export const runs = [
+  {icon: 'fridge', name: 'Холодильник', val: '≈ 20', unit: 'годин', at: c(3, 'fridge'), bar: 0.6},
+  {icon: 'router', name: 'Wi-Fi роутер', val: '100+', unit: 'годин', at: c(3, 'router'), bar: 1},
+  {icon: 'tv', name: 'Телевізор', val: '≈ 12', unit: 'годин', at: c(3, 'tv'), bar: 0.45},
+  {icon: 'kettle', name: 'Електрочайник', val: '≈ 8', unit: 'закипань', at: c(3, 'kettle'), bar: 0.35},
+  {icon: 'washer', name: 'Пральна машина', val: '1–2', unit: 'прання', at: c(3, 'washer'), bar: 0.25},
 ];
 const RunCard: React.FC<{r: (typeof runs)[number]}> = ({r}) => {
   const p = useIn(V + r.at);
@@ -117,11 +117,11 @@ export const S3: React.FC = () => (
 /* 4 — Ports */
 const IMG_W = 1040;
 const k = IMG_W / 1673;
-const ports = [
-  {icon: 'plug', title: '4 × розетки', sub: '220–240 В · 2400 Вт', at: 0.0, box: [392, 160, 790, 160]},
-  {icon: 'usb', title: '2 × USB-C', sub: 'по 100 Вт', at: 1.4, box: [405, 495, 160, 68]},
-  {icon: 'usb', title: '4 × USB-A', sub: 'до 18 Вт, швидка зарядка', at: 3.2, box: [405, 565, 160, 110]},
-  {icon: 'car', title: 'Автовихід', sub: '12 В · 120 Вт', at: 4.6, box: [398, 360, 160, 100]},
+export const ports = [
+  {icon: 'plug', title: '4 × розетки', sub: '220–240 В · 2400 Вт', at: c(4, 'ac'), box: [392, 160, 790, 160]},
+  {icon: 'usb', title: '2 × USB-C', sub: 'по 100 Вт', at: c(4, 'usbc'), box: [405, 495, 160, 68]},
+  {icon: 'usb', title: '4 × USB-A', sub: 'до 18 Вт, швидка зарядка', at: c(4, 'usba'), box: [405, 565, 160, 110]},
+  {icon: 'car', title: 'Автовихід', sub: '12 В · 120 Вт', at: c(4, 'car'), box: [398, 360, 160, 100]},
 ];
 const Ring: React.FC<{p: (typeof ports)[number]}> = ({p}) => {
   const a = useIn(V + p.at);
@@ -167,7 +167,7 @@ export const S4: React.FC = () => (
       {ports.map((p) => (
         <PortRow key={p.title} p={p} />
       ))}
-      <Rise at={V + 5.9}>
+      <Rise at={V + c(4, 'total')}>
         <div style={{marginTop: 26, display: 'flex', alignItems: 'baseline', gap: 22}}>
           <span style={{fontSize: 150, fontWeight: 800, letterSpacing: -6, color: C.green, lineHeight: 1}}>11</span>
           <span style={{fontSize: 40, fontWeight: 600, lineHeight: 1.15}}>
@@ -182,14 +182,14 @@ export const S4: React.FC = () => (
 );
 
 /* 5 — Charging */
-const charge = [
-  {icon: 'plug', title: 'Розетка', sub: 'до 1500 Вт', at: 2.6},
-  {icon: 'sun', title: 'Сонячні панелі', sub: 'до 1000 Вт, MPPT', at: 3.6},
-  {icon: 'car', title: 'Автомобіль', sub: '12 / 24 В', at: 6.2},
+export const charge = [
+  {icon: 'plug', title: 'Розетка', sub: 'до 1500 Вт', at: c(5, 'wall')},
+  {icon: 'sun', title: 'Сонячні панелі', sub: 'до 1000 Вт, MPPT', at: c(5, 'solar')},
+  {icon: 'car', title: 'Автомобіль', sub: '12 / 24 В', at: c(5, 'car')},
 ];
 export const S5: React.FC = () => {
   const s = useSec();
-  const pct = interpolate(s, [V, V + 2.4], [0, 100], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: (t) => 1 - Math.pow(1 - t, 2)});
+  const pct = interpolate(s, [V, V + 2], [0, 100], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: (t) => 1 - Math.pow(1 - t, 2)});
   const R = 250;
   const L = 2 * Math.PI * R;
   return (
@@ -232,10 +232,10 @@ export const S5: React.FC = () => {
 /* 6 — UPS */
 export const S6: React.FC = () => {
   const s = useSec();
-  const cut = V + 1.6; // grid goes down
+  const cut = V + 0.5; // grid goes down
   const gridOn = s < cut || (s < cut + 0.5 && Math.floor(s * 20) % 2 === 0);
   const batt = useIn(cut + 0.5);
-  const ms = useIn(V + 4.9);
+  const ms = useIn(V + c(6, 'ms'));
   const frame = useCurrentFrame();
   const dash = -frame * 3;
   const Node: React.FC<{x: number; icon: string; label: string; color: string; dim?: boolean}> = ({x, icon, label, color, dim}) => (
@@ -265,7 +265,7 @@ export const S6: React.FC = () => {
           15<span style={{fontSize: 90, letterSpacing: 0}}> мс</span>
         </div>
       </div>
-      <Rise at={V + 6.6} style={{position: 'absolute', left: 110, bottom: 110}}>
+      <Rise at={V + c(6, 'pc')} style={{position: 'absolute', left: 110, bottom: 110}}>
         <div style={{fontSize: 38, color: C.text}}>Комп’ютер, холодильник і роутер навіть не помітять відключення.</div>
       </Rise>
     </AbsoluteFill>
@@ -276,7 +276,7 @@ export const S6: React.FC = () => {
 export const S7: React.FC = () => {
   const s = useSec();
   const phone = useIn(0.2, 20);
-  const out = Math.round(interpolate(s, [1, 8], [820, 960]) + Math.sin(s * 3) * 12);
+  const out = Math.round(interpolate(s, [1, 5], [820, 960]) + Math.sin(s * 3) * 12);
   const hl = (at: number) => (s > V + at ? C.green : C.line);
   return (
     <AbsoluteFill style={pad}>
@@ -308,7 +308,7 @@ export const S7: React.FC = () => {
         <div style={{position: 'absolute', top: 22, left: 160, width: 120, height: 26, borderRadius: 13, background: '#000'}} />
         <div style={{fontSize: 24, color: C.dim}}>ALLPOWERS</div>
         <div style={{fontSize: 36, fontWeight: 700}}>S2000 Pro</div>
-        <div style={{margin: '26px auto 0', width: 250, height: 250, borderRadius: '50%', border: `14px solid ${C.cyan}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', boxShadow: `0 0 0 6px ${hl(5.8)}33, 0 0 40px rgba(34,200,255,0.4)`}}>
+        <div style={{margin: '26px auto 0', width: 250, height: 250, borderRadius: '50%', border: `14px solid ${C.cyan}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', boxShadow: `0 0 0 6px ${hl(c(7, 'charge'))}33, 0 0 40px rgba(34,200,255,0.4)`}}>
           <div style={{fontSize: 84, fontWeight: 800, lineHeight: 1}}>
             87<span style={{fontSize: 40, color: C.cyan}}>%</span>
           </div>
@@ -316,8 +316,8 @@ export const S7: React.FC = () => {
         </div>
         <div style={{display: 'flex', gap: 16, marginTop: 30}}>
           {[
-            {l: 'Вхід', v: '1500', at: 6.9},
-            {l: 'Вихід', v: String(out), at: 7.4},
+            {l: 'Вхід', v: '1500', at: c(7, 'power')},
+            {l: 'Вихід', v: String(out), at: c(7, 'power') + 0.3},
           ].map((x) => (
             <div key={x.l} style={{flex: 1, borderRadius: 24, padding: '18px 20px', background: C.panel, border: `2px solid ${hl(x.at)}`}}>
               <div style={{fontSize: 22, color: C.dim}}>{x.l}</div>
@@ -344,10 +344,10 @@ export const S7: React.FC = () => {
 };
 
 /* 8 — Durability & portability */
-const stats = [
+export const stats = [
   {icon: 'cycle', val: '2500+', label: 'циклів заряду', sub: 'до 80% ємності', at: 0},
-  {icon: 'weight', val: '13 кг', label: 'вага', sub: 'дві зручні ручки', at: 3.2},
-  {icon: 'box', val: '37,5 × 24,5 × 25', label: 'сантиметрів', sub: 'компактний корпус', at: 4.9},
+  {icon: 'weight', val: '13 кг', label: 'вага', sub: 'дві зручні ручки', at: c(8, 'kg')},
+  {icon: 'box', val: '37,5 × 24,5 × 25', label: 'сантиметрів', sub: 'компактний корпус', at: c(8, 'handles')},
 ];
 export const S8: React.FC = () => (
   <AbsoluteFill style={pad}>
@@ -385,12 +385,12 @@ export const S9: React.FC = () => (
     </Rise>
     <Product src="img/front.png" width={820} at={0.2} style={{left: 550, top: 290}} />
     <div style={{position: 'absolute', bottom: 70, left: 0, right: 0, textAlign: 'center'}}>
-      <Rise at={V + 2.1}>
+      <Rise at={V + c(9, 'energy')}>
         <div style={{fontSize: 68, fontWeight: 800, letterSpacing: -2}}>
           Енергія, яка <span style={{color: C.green}}>завжди з вами</span>
         </div>
       </Rise>
-      <Rise at={V + 3.2} y={16}>
+      <Rise at={V + c(9, 'energy') + 0.9} y={16}>
         <div style={{fontSize: 30, color: C.dim, marginTop: 14}}>1451 Вт·год · 2400 Вт · заряд за 1,5 години · керування зі смартфона</div>
       </Rise>
     </div>
