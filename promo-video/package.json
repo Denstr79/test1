@@ -1,0 +1,16 @@
+{
+  "name": "s2000-promo",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Promo out/allpowers-s2000-pro-promo.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.543",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.543",
+    "typescript": "^7.0.2"
+  }
+}
