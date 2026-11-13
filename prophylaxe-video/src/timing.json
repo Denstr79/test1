@@ -1,0 +1,512 @@
+[
+ {
+  "id": "intro",
+  "title": "Prophylaxe",
+  "dur": 19.59,
+  "cues": {
+   "gegner": 6.02,
+   "stufen": 12.65,
+   "pzr": 14.73,
+   "fluor": 16.87,
+   "fiss": 17.87
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Prophylaxe – das ist viel mehr als Zähne polieren."
+   },
+   {
+    "t": 3.6,
+    "text": "Es ist eine komplette Verteidigungsstrategie gegen Karies und Parodontitis."
+   },
+   {
+    "t": 8.26,
+    "text": "In diesem Video lernen Sie die wichtigsten Begriffe für die Fachsprachprüfung:"
+   },
+   {
+    "t": 12.65,
+    "text": "die drei Stufen der Prävention, die professionelle Zahnreinigung,"
+   },
+   {
+    "t": 16.87,
+    "text": "die Fluoridierung und die Fissurenversiegelung."
+   }
+  ]
+ },
+ {
+  "id": "stufen",
+  "title": "Drei Stufen der Prävention",
+  "dur": 30.28,
+  "cues": {
+   "prim": 2.79,
+   "sek": 11.13,
+   "tert": 20.01,
+   "ziel": 27.13
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Die Prävention hat drei Verteidigungslinien."
+   },
+   {
+    "t": 2.79,
+    "text": "Die primäre Prävention verhindert, dass eine Krankheit überhaupt entsteht:"
+   },
+   {
+    "t": 6.92,
+    "text": "durch zuckerarme Ernährung, gründliche Mundhygiene und Fluoride."
+   },
+   {
+    "t": 11.13,
+    "text": "Die sekundäre Prävention erkennt Schäden ganz früh –"
+   },
+   {
+    "t": 14.57,
+    "text": "mit regelmäßigen Kontrollen,"
+   },
+   {
+    "t": 16.25,
+    "text": "der professionellen Zahnreinigung und der Fissurenversiegelung."
+   },
+   {
+    "t": 20.01,
+    "text": "Die tertiäre Prävention repariert, was bereits zerstört ist: mit Füllungen,"
+   },
+   {
+    "t": 25.17,
+    "text": "Kronen und Zahnersatz."
+   },
+   {
+    "t": 27.13,
+    "text": "Das Ziel ist, diese dritte Linie nie zu erreichen."
+   }
+  ]
+ },
+ {
+  "id": "biofilm",
+  "title": "Der Gegner: Biofilm",
+  "dur": 15.33,
+  "cues": {
+   "biofilm": 2.41,
+   "bakt": 6.02,
+   "saeure": 10.02,
+   "demin": 13.02
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Der Gegner heißt Plaque – genauer: der orale Biofilm."
+   },
+   {
+    "t": 3.97,
+    "text": "Das sind keine losen Essensreste,"
+   },
+   {
+    "t": 6.02,
+    "text": "sondern eine fest organisierte Bakteriengemeinschaft auf dem Zahn."
+   },
+   {
+    "t": 10.02,
+    "text": "Ihre Säuren entziehen dem Zahnschmelz Mineralien."
+   },
+   {
+    "t": 13.02,
+    "text": "Das nennt man Demineralisation."
+   }
+  ]
+ },
+ {
+  "id": "verlust",
+  "title": "Abrasion · Erosion · Attrition",
+  "dur": 20.77,
+  "cues": {
+   "abr": 3.44,
+   "ero": 8.7,
+   "att": 14.32
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Zahnhartsubstanz geht aber auch ohne Bakterien verloren."
+   },
+   {
+    "t": 3.44,
+    "text": "Abrasion ist mechanischer Verschleiß, zum Beispiel durch zu festes Putzen."
+   },
+   {
+    "t": 8.7,
+    "text": "Erosion ist ein chemischer Angriff durch Säuren, etwa Magensäure oder Cola."
+   },
+   {
+    "t": 14.32,
+    "text": "Und Attrition ist der Abrieb von Zahn auf Zahn, zum Beispiel beim Knirschen,"
+   },
+   {
+    "t": 19.7,
+    "text": "dem Bruxismus."
+   }
+  ]
+ },
+ {
+  "id": "indizes",
+  "title": "Risiko erkennen: API und PBI",
+  "dur": 32.39,
+  "cues": {
+   "api": 5.83,
+   "blitz": 12.87,
+   "pbi": 16.45,
+   "ekg": 22.74,
+   "farb": 27.47
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Wie erkennt die Zahnärztin Ihr persönliches Risiko?"
+   },
+   {
+    "t": 3.87,
+    "text": "Mit zwei Indizes."
+   },
+   {
+    "t": 5.83,
+    "text": "Der A-P-I, der Approximalraum-Plaque-Index, zeigt,"
+   },
+   {
+    "t": 10.44,
+    "text": "ob in den Zahnzwischenräumen Plaque liegt."
+   },
+   {
+    "t": 12.87,
+    "text": "Er ist eine Momentaufnahme – wie ein Blitzerfoto."
+   },
+   {
+    "t": 16.45,
+    "text": "Der P-B-I, der Papillen-Blutungs-Index,"
+   },
+   {
+    "t": 20.27,
+    "text": "misst die Blutungsneigung des Zahnfleischs."
+   },
+   {
+    "t": 22.74,
+    "text": "Er zeigt eine chronische Entzündung – wie ein Langzeit-EKG."
+   },
+   {
+    "t": 27.47,
+    "text": "Zusätzlich werden die Beläge angefärbt, damit Sie selbst sehen,"
+   },
+   {
+    "t": 31.72,
+    "text": "wo Sie nicht hinkommen."
+   }
+  ]
+ },
+ {
+  "id": "hygiene",
+  "title": "Mundhygiene zu Hause",
+  "dur": 28.24,
+  "cues": {
+   "bass": 3.38,
+   "elek": 9.73,
+   "idb": 19.09,
+   "seide": 22.49,
+   "super": 25.27
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Zu Hause beginnt alles mit der richtigen Technik."
+   },
+   {
+    "t": 3.38,
+    "text": "Bei der Bass-Technik setzen Sie die Bürste schräg am Zahnfleischsaum an und rütteln sanft."
+   },
+   {
+    "t": 9.73,
+    "text": "Elektrische Zahnbürsten nehmen Ihnen die Bewegung ab:"
+   },
+   {
+    "t": 12.56,
+    "text": "oszillierend-rotierend mit rundem Kopf, oder als Schallzahnbürste."
+   },
+   {
+    "t": 17.13,
+    "text": "Für die Zahnzwischenräume gilt: Wo sie passt,"
+   },
+   {
+    "t": 20.07,
+    "text": "ist die Interdentalbürste die erste Wahl."
+   },
+   {
+    "t": 22.49,
+    "text": "Zahnseide ist für sehr enge Kontaktpunkte."
+   },
+   {
+    "t": 25.27,
+    "text": "Und Superfloss reinigt unter Brücken und an Zahnspangen."
+   }
+  ]
+ },
+ {
+  "id": "sieben",
+  "title": "Sieben Maßnahmen der DGZMK",
+  "dur": 40.75,
+  "cues": {
+   "m1": 9.33,
+   "m2": 17.05,
+   "m3": 22.89,
+   "praxis": 29.59,
+   "m4": 32.08,
+   "m5": 34.55,
+   "m6": 37.3,
+   "m7": 39.53
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Die Deutsche Gesellschaft für Zahn-,"
+   },
+   {
+    "t": 2.08,
+    "text": "Mund- und Kieferheilkunde fasst die Kariesprophylaxe in sieben Maßnahmen zusammen."
+   },
+   {
+    "t": 6.97,
+    "text": "Drei davon sind Ihre Aufgabe."
+   },
+   {
+    "t": 9.33,
+    "text": "Erstens: zweimal täglich putzen, mit fluoridhaltiger Zahnpasta –"
+   },
+   {
+    "t": 14.08,
+    "text": "tausend bis fünfzehnhundert ppm Fluorid."
+   },
+   {
+    "t": 17.05,
+    "text": "Zweitens: weniger Zuckerimpulse."
+   },
+   {
+    "t": 20.03,
+    "text": "Entscheidend ist die Häufigkeit, nicht die Menge."
+   },
+   {
+    "t": 22.89,
+    "text": "Drittens: zuckerfreier Kaugummi."
+   },
+   {
+    "t": 25.54,
+    "text": "Er regt den Speichel an, und Speichel neutralisiert Säuren."
+   },
+   {
+    "t": 29.59,
+    "text": "Vier Maßnahmen übernimmt die Praxis: das Individualprophylaxe-Programm,"
+   },
+   {
+    "t": 34.55,
+    "text": "die Fluoridierung mit hochkonzentriertem Lack, Chlorhexidin bei hohem Risiko –"
+   },
+   {
+    "t": 39.53,
+    "text": "und die Fissurenversiegelung."
+   }
+  ]
+ },
+ {
+  "id": "pzr",
+  "title": "Professionelle Zahnreinigung (PZR)",
+  "dur": 46.24,
+  "cues": {
+   "p1": 5.61,
+   "p2": 10.17,
+   "p3": 14.17,
+   "p4": 25.34,
+   "p5": 31.47,
+   "p6": 35.18,
+   "ind": 39.03
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Die professionelle Zahnreinigung, kurz P-Z-R, läuft in festen Schritten ab."
+   },
+   {
+    "t": 5.61,
+    "text": "Erstens: Eine desinfizierende Mundspülung senkt die Keimzahl."
+   },
+   {
+    "t": 10.17,
+    "text": "Zweitens: Zahnstein und harte Beläge werden entfernt."
+   },
+   {
+    "t": 14.17,
+    "text": "Drittens: Das Pulverstrahlgerät löst Verfärbungen –"
+   },
+   {
+    "t": 18.07,
+    "text": "mit Natriumbikarbonat auf gesundem Schmelz,"
+   },
+   {
+    "t": 20.75,
+    "text": "mit sanftem Glycinpulver an empfindlichen Zahnhälsen und unter dem Zahnfleisch."
+   },
+   {
+    "t": 25.34,
+    "text": "Viertens: Die Politur glättet die Oberflächen,"
+   },
+   {
+    "t": 29.01,
+    "text": "damit Bakterien schlechter haften."
+   },
+   {
+    "t": 31.47,
+    "text": "Fünftens: Die Zahnzwischenräume werden gereinigt."
+   },
+   {
+    "t": 35.18,
+    "text": "Und zum Schluss stärkt die Fluoridierung den Zahnschmelz."
+   },
+   {
+    "t": 39.03,
+    "text": "Besonders wichtig ist die P-Z-R bei Parodontitis, in der Schwangerschaft,"
+   },
+   {
+    "t": 43.87,
+    "text": "bei Diabetes und bei Herz-Kreislauf-Erkrankungen."
+   }
+  ]
+ },
+ {
+  "id": "fissur",
+  "title": "Fissurenversiegelung",
+  "dur": 33.57,
+  "cues": {
+   "borst": 5.13,
+   "kunst": 8.83,
+   "white": 13.71,
+   "arret": 23.77,
+   "kontra": 26.27
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Die Fissurenversiegelung schützt die tiefen Furchen auf den Kauflächen der Backenzähne."
+   },
+   {
+    "t": 5.13,
+    "text": "Dort kommen die Borsten nicht hin – Bakterien aber schon."
+   },
+   {
+    "t": 8.83,
+    "text": "Ein dünnfließender Kunststoff verschließt diese Schlupfwinkel."
+   },
+   {
+    "t": 12.59,
+    "text": "Und noch mehr: Eine beginnende Karies ohne Loch, ein sogenannter White Spot,"
+   },
+   {
+    "t": 17.66,
+    "text": "kann versiegelt werden."
+   },
+   {
+    "t": 19.11,
+    "text": "Die Bakterien werden von ihrer Nahrung abgeschnitten,"
+   },
+   {
+    "t": 21.85,
+    "text": "die Karies kommt zum Stillstand."
+   },
+   {
+    "t": 23.77,
+    "text": "Das nennt man Kariesarretierung."
+   },
+   {
+    "t": 26.27,
+    "text": "Nicht möglich ist die Versiegelung,"
+   },
+   {
+    "t": 28.25,
+    "text": "wenn der Zahn noch nicht vollständig durchgebrochen ist –"
+   },
+   {
+    "t": 31.08,
+    "text": "oder wenn die Karies bereits das Dentin erreicht hat."
+   }
+  ]
+ },
+ {
+  "id": "ablauf",
+  "title": "Ablauf der Versiegelung",
+  "dur": 19.62,
+  "cues": {
+   "a1": 1.87,
+   "a2": 5.54,
+   "a3": 11.35,
+   "a4": 15.57
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "So läuft die Versiegelung ab."
+   },
+   {
+    "t": 1.87,
+    "text": "Die Kaufläche wird gereinigt und absolut trockengelegt."
+   },
+   {
+    "t": 5.54,
+    "text": "Dann wird der Schmelz kurz mit Säure angeätzt;"
+   },
+   {
+    "t": 8.64,
+    "text": "nach dem Abspülen sieht er kreidig weiß aus."
+   },
+   {
+    "t": 11.35,
+    "text": "Der Versiegler fließt in die Fissuren und wird mit Blaulicht ausgehärtet."
+   },
+   {
+    "t": 15.57,
+    "text": "Zum Schluss: Biss kontrollieren, polieren und fluoridieren."
+   }
+  ]
+ },
+ {
+  "id": "fazit",
+  "title": "Zusammenfassung",
+  "dur": 23.88,
+  "cues": {
+   "k1": 6.41,
+   "k2": 9.83,
+   "k3": 11.93,
+   "partner": 16.05,
+   "erfolg": 21.3
+  },
+  "subs": [
+   {
+    "t": 0.05,
+    "text": "Fassen wir zusammen."
+   },
+   {
+    "t": 1.73,
+    "text": "Moderne Zahnmedizin bedeutet: Risiken managen statt reparieren."
+   },
+   {
+    "t": 6.41,
+    "text": "Mit Indizes wie A-P-I und P-B-I, mit guter Mundhygiene zu Hause, mit P-Z-R,"
+   },
+   {
+    "t": 13.15,
+    "text": "Fluoridierung und Fissurenversiegelung."
+   },
+   {
+    "t": 16.05,
+    "text": "So wird aus dem passiven Patienten ein aktiver Partner für die eigene Mundgesundheit."
+   },
+   {
+    "t": 21.3,
+    "text": "Viel Erfolg bei Ihrer Fachsprachprüfung!"
+   }
+  ]
+ }
+]
