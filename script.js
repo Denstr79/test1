@@ -40,6 +40,24 @@
   }), { threshold: .15, rootMargin: '0px 0px -6% 0px' });
   $$('.reveal, .cert').forEach(el => io.observe(el));
 
+
+  // lightbox for gallery images
+  const lb=document.createElement('div'); lb.className='lightbox'; lb.innerHTML='<img alt="">'; document.body.appendChild(lb);
+  const lbi=lb.firstChild;
+  document.addEventListener('click',e=>{
+    const im=e.target.closest('.gimg img'); if(im){lbi.src=im.src; lb.classList.add('on');}
+    else if(lb.classList.contains('on')) lb.classList.remove('on');
+  });
+  addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+
+  // forms -> prepared mailto (static site, no backend)
+  $$('form.form').forEach(f=>f.addEventListener('submit',ev=>{
+    ev.preventDefault();
+    const d=new FormData(f), subj=(d.get('subject')||'')||f.dataset.subject||'Anfrage';
+    const body=`${d.get('msg')||''}\n\n${d.get('name')||''}\n${d.get('email')||''}`;
+    location.href=`mailto:${f.dataset.mail}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
+  }));
+
   // 3D tilt
   if (!reduce && matchMedia('(hover:hover)').matches) {
     $$('[data-tilt]').forEach(el => {
