@@ -1,4 +1,4 @@
-:root{
+:root{color-scheme:dark;
   --bg:#05080f; --bg2:#0a101c; --panel:#0e1626; --line:rgba(140,170,220,.14);
   --tx:#e8eef8; --mut:#8c9bb5; --blue:#2f7bff; --cyan:#35d4ff; --glow:rgba(47,123,255,.45);
   --r:20px; --ease:cubic-bezier(.2,.7,.2,1);
